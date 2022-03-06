@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+</head>
+<body>
+    {{>pre_header}}
+    <br>
+    {{>leader_header}}
+    <br>
+    <h1>Weather Report</h1> 
+    <br> <br> <br>
+    <form method="POST" action="/leader/weather_insert">
+        <label>Place : </label>
+        <input type = "text" name="place"/>
+        <br>
+        <label>Temparature : </label>
+        <input type = "number" name="temparature"/>
+        <br>
+        <label>Rain : </label>
+        <input type = "number" name="rain"/>
+        <br>
+        <input type="submit" value="Submit"/>
+    <br><br><br>
+    <h3>{{message}}</h3>
+    </form>
+</body>
+</html>
